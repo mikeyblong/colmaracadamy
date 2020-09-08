@@ -7,11 +7,122 @@ html {
 body {
     margin: 0;
     font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    background-color: white;
+    color: rgb(74, 74, 74);
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+button {
+    padding: 8px;
+    background-color: rgb(74, 74, 74);
+    color: white;
+    font-weight: 300;
+    font-size: 1rem;
+    border: none;
+    width: 100%;
+}
+
+.wrapper {
+    position: relative;
+    top: 65px;
+    padding: 0px 24px;
+}
+
+.grid-container {
+    display: grid;
+    padding: 32px 24px;
 }
 
 /* HEADER SECTION */
 
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    height: 64px;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+}
+
+.logo {
+    padding-left: 24px;
+}
+
+span.logo-bold {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+span.logo-light {
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+
+img, span.logo-bold, span.logo-light {
+    vertical-align: middle;
+}
+
+.nav-bar {
+    padding-right: 24px;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: rgb(74, 74, 74);
+    padding-left: 16px;
+}
+
 /* CTA SECTION */
+
+.cta {
+    grid-template-columns: 60% 40%;
+    background-color: rgb(216, 216, 216);
+}
+
+.cta-image-container {
+    grid-column: 1 / 2;
+    margin-right: 24px;
+}
+
+.cta-content-container {
+    grid-column: 2 / 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cta-image {
+    width: 100%;
+}
+
+.box1 {
+    margin-bottom: 40px;
+    width: 70%;
+}
+
+.box2 {
+    margin-bottom: 40px;
+    width: 75%;
+}
+
+.box3 {
+    width: 60%;
+}
+
 
 /* CAMPUS INFO SECTION */
 
