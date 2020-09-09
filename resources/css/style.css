@@ -1,4 +1,4 @@
-/* UNIVERSAL STYLES */
+/* GLOBAL STYLES */
 
 html {
     box-sizing: border-box;
@@ -19,7 +19,6 @@ h2 {
 }
 
 h2.section-title {
-    margin: 32px 0px 0px 0px;
     text-align: center;
 }
 
@@ -41,34 +40,14 @@ p {
     font-weight: 300;
 }
 
-header a {
-    font-size: 1rem;
-}
-
 a {
     text-decoration: none;
     color: rgb(85, 128, 174);
     font-size: 0.8rem;
 }
 
-button {
-    padding: 8px;
-    background-color: rgb(74, 74, 74);
-    color: white;
-    font-weight: 300;
+header a {
     font-size: 1rem;
-    border: none;
-    width: 100%;
-}
-
-.wrapper {
-    position: relative;
-    top: 65px;
-}
-
-.grid-container {
-    display: grid;
-    padding: 32px 24px;
 }
 
 .img {
@@ -76,16 +55,40 @@ button {
     height: auto;
 }
 
-.banner-image-container {
+h4, p, a {
+    padding: 8px 0px;
+}
+
+.banner-image-container-grid-item h2 {
+    margin: 24px 0px;
+}
+
+/* WRAPPER */
+
+.wrapper {
+    position: relative;
+    top: 65px;
+}
+
+/* SHARED GRID CONTAINERS */
+
+.grid-container {
+    display: grid;
+    padding: 32px 24px;
+}
+
+.banner-image-container-grid-item {
     grid-column: 1 / 2;
     margin-right: 24px;
 }
 
-.banner-image-descrip {
+.banner-image-descrip-grid-item {
     grid-row: 2 / 3;
     grid-column: 1 / 2;
     margin-right: 24px;
 }
+
+/* SHARED FLEX CONTAINERS */
 
 .thumbnail-image-container {
     grid-column: 1 / 2;
@@ -99,6 +102,18 @@ button {
     flex-direction: column;
     justify-content: center;
     padding: 0px 16px;
+}
+
+/* SECTION CONTAINERS */
+
+.gray-container {
+    background-color: rgb(216, 216, 216);
+    padding-top: 32px;
+}
+
+.white-container {
+    background-color: white;
+    padding-top: 32px;
 }
 
 /* HEADER SECTION */
@@ -149,25 +164,35 @@ img, span.logo-bold, span.logo-light {
     background-color: rgb(216, 216, 216);
 }
 
-.cta-content-container {
+.cta-content-flex-container {
     grid-column: 2 / 3;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.box1 {
+.cta-flex-item-box1 {
     margin-bottom: 40px;
     width: 70%;
 }
 
-.box2 {
+.cta-flex-item-box2 {
     margin-bottom: 40px;
     width: 75%;
 }
 
-.box3 {
+.cta-flex-item-box3 {
     width: 60%;
+}
+
+button {
+    padding: 8px;
+    background-color: rgb(74, 74, 74);
+    color: white;
+    font-weight: 300;
+    font-size: 1rem;
+    border: none;
+    width: 100%;
 }
 
 /* CAMPUS INFO SECTION */
@@ -184,32 +209,22 @@ img, span.logo-bold, span.logo-light {
     grid-template-rows: 1fr 1fr 1fr;
     row-gap: 5px;
     background-color: white;
-    border-left: 1px solid rgb(216, 216, 216);
 }
 
-.link-box-white {
+.link-box-white-grid-container {
     display: grid;
     grid-template-columns: 35% 65%;
     background-color: white;
-    border-top: 2px solid rgb(216, 216, 216);
-    border-right: 1px solid rgb(216, 216, 216);
+    border: 1px solid rgb(216, 216, 216);
 }
 
-.link-box-gray {
+.link-box-gray-grid-container {
     display: grid;
     grid-template-columns: 35% 65%;
     background-color: rgb(216, 216, 216);
 }
 
-h4, p, a {
-    padding: 8px 0px;
-}
-
-.banner-image-container h2 {
-    margin: 24px 0px;
-}
-
-.banner-image-container span {
+.banner-image-container-grid-item span {
     font-size: 0.75rem;
     display: block;
     margin-top: 20px;
@@ -218,9 +233,9 @@ h4, p, a {
 /* START LEARNING SECTION */
 
 .start-learning {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    margin: 0px 72px 32px 72px;
+    grid-template: 1fr 1fr / 1fr 1fr 1fr;
+    padding-right: 72px;
+    padding-left: 72px;
     grid-gap: 32px;
 }
 
@@ -260,10 +275,6 @@ h4, p, a {
     grid-row: 2 / 3;
 }
 
-.course-image-container {
-
-}
-
 .course-content-container {
     padding: 16px 16px 24px 16px;
 }
@@ -273,15 +284,6 @@ h4, p, a {
 .thesis-exhibit {
     background-color: white;
     grid-template-columns: 60% 40%;
-}
-
-.section-title-container {
-    background-color: white;
-}
-
-.white-container {
-    background-color: white;
-    padding-top: 16px;
 }
 
 /* FOOTER SECTION */
